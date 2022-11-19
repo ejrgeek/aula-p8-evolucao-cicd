@@ -10,19 +10,15 @@ from apps.endereco.models import Endereco
 
 
 def cadastrar_endereco_cep(request, cep):
-    try:
-        req = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
+    req = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
 
-        data = json.loads(req.text)
+    data = json.loads(req.text)
 
-        endereco = Endereco.objects.create(**data)
+    endereco = Endereco.objects.create(**data)
 
-        model = model_to_dict(endereco)
+    model = model_to_dict(endereco)
 
-        return JsonResponse(model)
-
-    except Exception as e:
-        return HttpResponse(e)
+    return JsonResponse(model)
 
 
 def buscar_cep(request, cep):
