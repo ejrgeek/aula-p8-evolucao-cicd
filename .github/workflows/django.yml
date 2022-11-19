@@ -49,7 +49,7 @@ jobs:
         echo SECRET_KEY='p8-ci-cd-test' >> .env
         echo DEBUG='True' >> .env
         echo ALLOWED_HOSTS='127.0.0.1,localhost,0.0.0.0,' >> .env
-        echo SENTRY_KEY='https://' >> .env
+        echo SENTRY_KEY='https://9ce1a2fa0fe944c184efb35828609765@o4504187268431872.ingest.sentry.io/4504187269283840' >> .env
         echo INTERNAL_IPS='127.0.0.1,localhost,0.0.0.0,' >> .env
         echo CORS_ORIGIN_WHITELIST='http://localhost,http://localhost:3000,http://127.0.0.1:3000' >> .env
         echo ALLOWED_CORS_ORIGIN_HOSTS='http://localhost,http://localhost:3000,http://127.0.0.1:3000' >> .env
