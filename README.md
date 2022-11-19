@@ -2,7 +2,7 @@
 
 A aplicação ira consumir uma API de CEP (viacep.com.br/ws/{cep-numero}/json/) e preencher os models
 
-- Status da branch main -> 
+- Status da branch main -> ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/ejrgeek/aula-p8-evolucao-cicd/Aula%20P8%20CI-CD/main)
 - Status da branch develop -> ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/ejrgeek/aula-p8-evolucao-cicd/Aula%20P8%20CI-CD/develop)
 
 ---
