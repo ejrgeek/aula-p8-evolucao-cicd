@@ -1,16 +1,8 @@
-"""
-ASGI config for core project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
-"""
-
 import os
-
+from dj_static import Cling
 from django.core.asgi import get_asgi_application
+from core.settings.utils import get_settings_module
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", get_settings_module())
 
-application = get_asgi_application()
+application = Cling(get_asgi_application())

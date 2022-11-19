@@ -1,0 +1,35 @@
+import json
+from django.forms import model_to_dict
+from django.http import HttpResponse, JsonResponse
+import requests
+from django.shortcuts import render
+
+from apps.endereco.models import Endereco
+
+# Create your views here.
+
+
+def cadastrar_endereco_cep(request, cep):
+    try:
+        req = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
+
+        data = json.loads(req.text)
+
+        endereco = Endereco.objects.create(**data)
+
+        model = model_to_dict(endereco)
+
+        return JsonResponse(model)
+
+    except Exception as e:
+        return HttpResponse(e)
+
+
+def buscar_cep(request, cep):
+    endereco = Endereco.objects.get(cep=cep)
+
+    model = model_to_dict(endereco)
+
+    print(model)
+
+    return JsonResponse(model)

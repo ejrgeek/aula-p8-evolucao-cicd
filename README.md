@@ -1,5 +1,7 @@
 ### Aula sobre CI/CD - Evolução de Software P8
 
+A aplicação ira consumir uma API de CEP (viacep.com.br/ws/{cep-numero}/json/) e preencher os models
+
 - Status da branch main -> 
 - Status da branch develop ->
 
@@ -14,9 +16,6 @@ Requisitos -> homol:
 * Python 3.10+
 * PostgreSQL 14.5+
 
-Requisitos -> prod (Heroku):
-* Heroku Python 3.10+
-* AWS Bucket S3
 
 ( Homol/sem heroku) Recomendação - configurando o PostgreSQL (mude nome do banco, nome do usuário e senha):
 
@@ -69,18 +68,8 @@ HOMOL_DATABASE_NAME=
 HOMOL_DATABASE_USERNAME=
 HOMOL_DATABASE_PASSWORD=
 
-# AWS
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_STORAGE_BUCKET_NAME=
-
 # SENTRY KEY
 SENTRY_KEY=
-
-# EMAIL
-MAILGUN_API_KEY=
-MAILGUN_API_BASE_URL=
-MAILGUN_DOMAIN=
 
 # REDIS
 REDIS=redis://redis:6379/0
@@ -88,7 +77,6 @@ REDIS=redis://redis:6379/0
 # APP VERSION
 VERSION=0.0.0+build-setup
 ```
-
 
 Pronto, agora rode os comandos:
 

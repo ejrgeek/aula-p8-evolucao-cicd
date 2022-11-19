@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from apps.endereco.views import cadastrar_endereco_cep, buscar_cep
+
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("cadastrar-cep/<str:cep>", cadastrar_endereco_cep, name="cadastrar_cep"),
+    path("buscar-cep/<str:cep>", buscar_cep, name="buscar_cep"),
 ]
